@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+*{
+  margin : 0 ;
+  padding : 0 ;
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+}
+body{
+  max-width: 1200px;
+  padding : 10px 0px;
+  margin : auto ;
+}
+body::-webkit-scrollbar
+{
+  display: none;
+}
+.title{
+  padding : 20px 0px;
+  text-align: center;
+  font-size: 40px;
+}
+.search
+{
+  width : 100% ;
+  padding: 45px 0px;
+  input{
+    width : 100%;
+    padding : 10px 5px;
+    border : 2px solid #D3D3D3;
+    outline: none;
+    font-size: 15px;
+  }
+}
+.add{
+  form{
+    width : 100%;
+    display: flex;
+    gap : 15px;
+  }
+  input[type="text"],input[type="number"],input[type="email"]
+  {
+    width : 25%;
+    padding : 10px 5px;
+    border : 2px solid #D3D3D3;
+    outline: none;
+    font-size: 15px;
+  }
+  input[type="submit"]
+  {
+    background-color: #0275d8;
+    border : none ;
+    outline :  none;
+    padding : 10px 50px;
+    color : white;
+    font-size: 15px;
+    cursor: pointer;
+  }
+}
+.card
+{
+  display: flex;
+  gap : 10px;
+  flex-wrap: nowrap;
+  width : 100%;
+  border: 1px solid #D3D3D3;
+  margin-top: 40px;
+  ul{
+    width : 45%;
+    min-height: 350px;
+    max-height : 350px;
+    height : 100%;
+    overflow-y: scroll;
+    list-style-type: none;
+    li{
+      padding : 10px 10px;
+      border-bottom: 1px solid #D3D3D3;
+      user-select: none;
+      cursor: pointer;
+      &:hover
+      {
+        background-color: #D3D3D3;
+        color : black;
+      }
+    }
+  }
+  .profile
+  {
+    padding : 0px 20px;
+    margin-top: 10px;
+    width : calc(100% - 45%);
+    .profileDiv
+    {
+      display: flex;
+      justify-content: center;
+    }
+    .details
+    {
+      max-width: 80%;
+      margin: 20px auto;
+      h4{
+        margin-bottom : 20px;
+        &:first-child
+        {
+          margin-top: 10px;
+        }
+        span{
+          word-wrap: break-word;
+        }
+      }
+      button{
+        border: none;
+        outline: none;
+        color : white;
+        background-color: red;
+        padding : 8px 15px;
+      }
+    }
+  }
+}
+@media screen and (max-width : 1230px)
+{
+  body{
+    max-width : 1000px;
+    width : 100%;
+    margin : auto;
+  } 
+}
+@media screen and (max-width : 1065px)
+{
+  body{
+    max-width : 900px;
+    width : 100%;
+    margin : auto;
+  }
+}
+@media screen and (max-width : 920px) {
+  .show{
+    display: block;
+  }
+  .add
+  {
+    min-height: 100vh;
+  }
+  .hide{
+    display: none !important;
+  }
+  .details
+  {
+    padding-inline: 25px;
+    h4{
+
+      margin-bottom: 20px;
+    }
+    button{
+      background-color: orangered;
+      color : white ;
+      border : none;
+      outline : none ;
+      padding : 10px 20px ;
+      cursor: pointer;
+    }
+  }
+  .add{
+    padding-inline: 25px;
+    form{
+      flex-direction: column;
+      input{
+        width : 100% !important;
+        padding : 0px 10px;
+      }
+    }
+  } 
+  
+  .search
+  {
+    padding : 45px 25px;
+  }
+  .card
+  {
+    flex-direction: column;
+    padding-inline: 25px;
+    border : none !important;
+    ul{
+      width : 100%;
+    }
+    .profile
+    {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width : 100%;
+    }
+  }
+}
+@media screen and (max-width : 500px) {
+  .profile
+  {
+    flex-direction: column;
+  }
+}
